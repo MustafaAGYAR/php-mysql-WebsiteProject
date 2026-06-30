@@ -169,8 +169,8 @@ if (isset($_POST['insertislemi'])) {
 		gorevID=:gorevID,
 		dagitimHiz=:dagitimHiz,
 		anlasmaSayisi=:anlasmaSayisi
-		WHERE personelID={$_POST['personelID']}"
-		
+		WHERE personelID=:personelID"
+
 		);
 
 		$insert=$kaydet->execute(array(
@@ -182,7 +182,8 @@ if (isset($_POST['insertislemi'])) {
 		'personelMail' => $_POST['personelMail'],
 		'gorevID' => $_POST['gorevID'],
 		'dagitimHiz' => $_POST['dagitimHiz'],
-		'anlasmaSayisi' => $_POST['anlasmaSayisi']
+		'anlasmaSayisi' => $_POST['anlasmaSayisi'],
+		'personelID' => $_POST['personelID']
 		));
 
 
