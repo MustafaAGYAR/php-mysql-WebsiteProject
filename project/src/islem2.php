@@ -52,16 +52,17 @@ if (isset($_POST['insertislemi'])) {
 			musteriSoyAd=:musteriSoyAd,
 			musteriTel=:musteriTel,
 			musteriMail=:musteriMail
-			WHERE musteriID={$_POST['musteriID']}"
-			
+			WHERE musteriID=:musteriID"
+
 			);
-	
+
 			$insert=$kaydet->execute(array(
 			'ilceID' => $_POST['ilceID'],
 			'musteriAd' => $_POST['musteriAd'],
 			'musteriSoyAd' => $_POST['musteriSoyAd'],
 			'musteriTel' => $_POST['musteriTel'],
-			'musteriMail' => $_POST['musteriMail']
+			'musteriMail' => $_POST['musteriMail'],
+			'musteriID' => $_POST['musteriID']
 		));
 	
 	
